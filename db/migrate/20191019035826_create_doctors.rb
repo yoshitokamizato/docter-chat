@@ -4,7 +4,7 @@ class CreateDoctors < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :age
       t.references :review
-      t.references :hospital
+      t.references :hospital_id
       t.timestamps
     end
   end

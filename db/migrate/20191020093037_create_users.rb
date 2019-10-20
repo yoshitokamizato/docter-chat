@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.intenger :age
       t.string :address
-      t.references :hospital  #病院ID　doctor.rb
-      t.references :docter
+      t.references :hospital_id  #病院ID　
+      t.references :docter_id    #医者ID
 
       t.timestamps
     end
