@@ -383,3 +383,114 @@ SyntaxError: Identifier 'environment' has already been declared
 Completed 200 OK in 3566ms (Views: 3557.5ms | ActiveRecord: 0.0ms | Allocations: 1383670)
 
 
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20191021010023)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191021010023"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2019-10-21 10:27:54 +0900
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007fed5f918670>):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_up" for ::1 at 2019-10-21 10:29:07 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 216)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 549)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.6ms | Allocations: 9062)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/Users/aki/Desktop/docter-chat/config/webpack/environment.js:5
+const { environment } = require('@rails/webpacker')
+        ^
+
+SyntaxError: Identifier 'environment' has already been declared
+    at new Script (vm.js:86:7)
+    at NativeCompileCache._moduleCompile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:186:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/config/webpack/development.js:3:21)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at WEBPACK_OPTIONS (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/node_modules/yargs/yargs.js:567:18)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 75)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/Users/aki/Desktop/docter-chat/config/webpack/environment.js:5
+const { environment } = require('@rails/webpacker')
+        ^
+
+SyntaxError: Identifier 'environment' has already been declared
+    at new Script (vm.js:86:7)
+    at NativeCompileCache._moduleCompile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:186:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/config/webpack/development.js:3:21)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at WEBPACK_OPTIONS (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/node_modules/yargs/yargs.js:567:18)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+
+Completed 200 OK in 3740ms (Views: 3717.3ms | ActiveRecord: 0.8ms | Allocations: 1406336)
+
+
