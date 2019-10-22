@@ -313,9 +313,121 @@ Migrating to CreateMedicalExaminations (20191020090240)
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2019-10-20 19:54:25 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 263)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/aki/Desktop/docter-chat/public/packs
+Completed 200 OK in 6705ms (Views: 6687.8ms | ActiveRecord: 0.0ms | Allocations: 1383242)
+
+
+Started GET "/" for ::1 at 2019-10-20 19:54:34 +0900
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 6094)
+
+
+Started GET "/" for ::1 at 2019-10-20 20:06:23 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 263)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/Users/aki/Desktop/docter-chat/config/webpack/environment.js:5
+const { environment } = require('@rails/webpacker')
+        ^
+
+SyntaxError: Identifier 'environment' has already been declared
+    at new Script (vm.js:86:7)
+    at NativeCompileCache._moduleCompile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:186:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/config/webpack/development.js:3:21)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at WEBPACK_OPTIONS (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/node_modules/yargs/yargs.js:567:18)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/Users/aki/Desktop/docter-chat/config/webpack/environment.js:5
+const { environment } = require('@rails/webpacker')
+        ^
+
+SyntaxError: Identifier 'environment' has already been declared
+    at new Script (vm.js:86:7)
+    at NativeCompileCache._moduleCompile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:186:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/config/webpack/development.js:3:21)
+    at Module._compile (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/aki/Desktop/docter-chat/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at WEBPACK_OPTIONS (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/node_modules/yargs/yargs.js:567:18)
+    at /Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/Users/aki/Desktop/docter-chat/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+
+Completed 200 OK in 3566ms (Views: 3557.5ms | ActiveRecord: 0.0ms | Allocations: 1383670)
+
+
+=======
+>>>>>>> master
 >>>>>>> develop/hello_world
 =======
   [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateUsers (20191020093037)
 >>>>>>> c81668617b4d62593118737237c703ca90acd906
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> master
