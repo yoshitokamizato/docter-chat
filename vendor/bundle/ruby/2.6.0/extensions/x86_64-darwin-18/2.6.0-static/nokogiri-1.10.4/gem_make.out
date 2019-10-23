@@ -1,5 +1,5 @@
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.4/ext/nokogiri
-/Users/hh/.rbenv/versions/2.6.4/bin/ruby -I /Users/hh/.rbenv/versions/2.6.4/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191020-20669-1p8ftrr.rb extconf.rb --use-system-libraries
+/Users/hh/.rbenv/versions/2.6.2/bin/ruby -I /Users/hh/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20191023-19496-1e9jaju.rb extconf.rb --use-system-libraries
 checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using system libraries.
@@ -32,16 +32,16 @@ compiling xml_cdata.c
 xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
     content_str_len = RSTRING_LEN(content);
                     ~ ^~~~~~~~~~~~~~~~~~~~
-/Users/hh/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+/Users/hh/.rbenv/versions/2.6.2/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
      RSTRING_EMBED_LEN(str) : \
      ^~~~~~~~~~~~~~~~~~~~~~
-/Users/hh/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+/Users/hh/.rbenv/versions/2.6.2/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
      (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
     content_str_len = RSTRING_LEN(content);
                     ~ ^~~~~~~~~~~~~~~~~~~~
-/Users/hh/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+/Users/hh/.rbenv/versions/2.6.2/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
      RSTRING(str)->as.heap.len)
      ~~~~~~~~~~~~~~~~~~~~~~^~~
 2 warnings generated.
@@ -109,4 +109,4 @@ rm -rf /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10
 
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.4/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20191020-20669-h0ehxz/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20191023-19496-nrt054/nokogiri

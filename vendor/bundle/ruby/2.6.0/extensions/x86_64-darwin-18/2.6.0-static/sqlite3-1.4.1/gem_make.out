@@ -1,5 +1,5 @@
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.1/ext/sqlite3
-/Users/hh/.rbenv/versions/2.6.4/bin/ruby -I /Users/hh/.rbenv/versions/2.6.4/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191020-20669-6zjs39.rb extconf.rb
+/Users/hh/.rbenv/versions/2.6.2/bin/ruby -I /Users/hh/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20191023-19496-16m4i92.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -68,4 +68,4 @@ ld: warning: directory not found for option '-L/usr/local/Cellar/sqlite/3.29.0/l
 
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.1/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20191020-20669-czotaz/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20191023-19496-1uxjvkm/sqlite3

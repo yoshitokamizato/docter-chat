@@ -1,5 +1,5 @@
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
-/Users/hh/.rbenv/versions/2.6.4/bin/ruby -I /Users/hh/.rbenv/versions/2.6.4/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191020-20669-1q0pxmj.rb extconf.rb
+/Users/hh/.rbenv/versions/2.6.2/bin/ruby -I /Users/hh/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20191023-19496-u5tkqw.rb extconf.rb
 creating Makefile
 
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20191020-20669-15u87cb/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20191023-19496-ur7ci5/bootsnap

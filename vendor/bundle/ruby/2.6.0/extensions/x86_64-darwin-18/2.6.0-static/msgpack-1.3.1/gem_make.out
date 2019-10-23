@@ -1,5 +1,5 @@
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/msgpack-1.3.1/ext/msgpack
-/Users/hh/.rbenv/versions/2.6.4/bin/ruby -I /Users/hh/.rbenv/versions/2.6.4/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191020-20669-1alfund.rb extconf.rb
+/Users/hh/.rbenv/versions/2.6.2/bin/ruby -I /Users/hh/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20191023-19496-q609o6.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -39,4 +39,4 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/hh/Desktop/docter-chat/vendor/bundle/ruby/2.6.0/gems/msgpack-1.3.1/ext/msgpack
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20191020-20669-1slxdqw/msgpack
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20191023-19496-5bh5kw/msgpack
