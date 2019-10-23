@@ -10,18 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_19_035826) do
+ActiveRecord::Schema.define(version: 2019_10_22_070228) do
 
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.integer "review_id"
-    t.integer "hospital_id"
+    t.integer "hospital_id_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["hospital_id"], name: "index_doctors_on_hospital_id"
+    t.index ["hospital_id_id"], name: "index_doctors_on_hospital_id_id"
     t.index ["review_id"], name: "index_doctors_on_review_id"
-ActiveRecord::Schema.define(version: 2019_10_20_090240) do
+  end
+
+  create_table "hospitals", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.integer "docter_id_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["docter_id_id"], name: "index_hospitals_on_docter_id_id"
+  end
 
   create_table "medical_examinations", force: :cascade do |t|
     t.integer "weight"
@@ -37,9 +46,13 @@ ActiveRecord::Schema.define(version: 2019_10_20_090240) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.string "sex"
+    t.string "address"
+    t.integer "hospital_id_id"
+    t.integer "docter_id_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["docter_id_id"], name: "index_users_on_docter_id_id"
+    t.index ["hospital_id_id"], name: "index_users_on_hospital_id_id"
   end
 
 end
