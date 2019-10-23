@@ -591,3 +591,12 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 904)
 
 
+Started GET "/" for ::1 at 2019-10-23 16:38:51 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.1ms | Allocations: 319)
+Completed 200 OK in 80ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 1831)
+
+
