@@ -12,7 +12,20 @@
   </head>
 
   <body>
+  <%= render "layouts/header" %>
+
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <%= flash[:alert]%>
+  <% end %>
+
+
+
     <%= yield %>
+  <%= render "layouts/footer" %>
   <%# bootstrap %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>   
   </body>
