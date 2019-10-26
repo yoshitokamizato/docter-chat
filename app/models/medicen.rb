@@ -1,0 +1,2 @@
+class Medicen < ApplicationRecord
+end
