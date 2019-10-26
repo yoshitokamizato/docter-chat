@@ -19,3 +19,6 @@ doc/
 .secret
 # vendor フォルダは要らない
 /vendor
+
+# Ignore node_modules
+node_modules/
