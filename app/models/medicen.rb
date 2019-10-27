@@ -1,2 +1,0 @@
-class Medicen < ApplicationRecord
-end
