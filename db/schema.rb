@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_25_094730) do
+ActiveRecord::Schema.define(version: 2019_10_27_123348) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -67,6 +67,24 @@ ActiveRecord::Schema.define(version: 2019_10_25_094730) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "medicens", force: :cascade do |t|
+    t.string "medicen"
+    t.string "description"
+    t.integer "user_id_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id_id"], name: "index_medicens_on_user_id_id"
+  end
+
+  create_table "medicines", force: :cascade do |t|
+    t.string "medicen"
+    t.string "description"
+    t.integer "user_medicine_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_medicine_id"], name: "index_medicines_on_user_medicine_id"
   end
 
   create_table "users", force: :cascade do |t|
